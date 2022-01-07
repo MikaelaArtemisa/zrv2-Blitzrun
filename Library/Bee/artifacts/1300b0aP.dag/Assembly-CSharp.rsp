@@ -304,6 +304,7 @@
 "Assets/Scrips/GameController.cs"
 "Assets/Scrips/PlayerController.cs"
 "Assets/Scrips/TiendaArmas.cs"
+"Assets/Scrips/Zombies/Zombie.cs"
 -langversion:9.0
 
 /deterministic

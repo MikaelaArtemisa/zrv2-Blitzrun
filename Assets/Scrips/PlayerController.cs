@@ -13,6 +13,10 @@ public class PlayerController : MonoBehaviour
     public Text txtVidaJugador;
     public int dineroJugador = 100;
     public Text txtDineroJugador;
+    public int cantidadMuertes;
+    public Text txtCantidadMuertes;
+    public int zombiesEliminados;
+    public Text txtZombiesEliminados;
 
     //ESTADISTICAS DE FISICAS
     public float velocidadJugador;
@@ -43,6 +47,7 @@ public class PlayerController : MonoBehaviour
     {
         movimientoJugador();
         actualizarHud();
+        perderPartida();
         transform.Translate(Vector3.forward * velocidadJugador * Time.deltaTime);
     }
 
@@ -50,6 +55,8 @@ public class PlayerController : MonoBehaviour
     private void actualizarHud(){
         txtVidaJugador.text = vidaJugador + "";
         txtDineroJugador.text = dineroJugador + "";
+        txtCantidadMuertes.text = cantidadMuertes + "";
+        txtZombiesEliminados.text = zombiesEliminados + "";
 
         //=====================================================================
         //LIMITES HUD
@@ -153,6 +160,17 @@ public class PlayerController : MonoBehaviour
     }
 
 
+    public void perderPartida(){
+
+        if (vidaJugador <= 0)
+        {
+            transform.position =  new Vector3(-6.94000006f,2.80999994f,15.71f);
+            cantidadMuertes = cantidadMuertes + 1;
+            vidaJugador = 100;
+        }
+
+    }
+
     //============================================================
     //CONTROLES TOUCH
     //============================================================
@@ -180,6 +198,11 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Piso")
         {
             tocaPiso = true;
+        }
+
+        if (collision.gameObject.tag == "zombie")
+        {
+            vidaJugador = vidaJugador - 1;
         }
 
 

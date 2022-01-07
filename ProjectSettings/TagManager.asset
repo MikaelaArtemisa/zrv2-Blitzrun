@@ -9,6 +9,7 @@ TagManager:
   - tiendaEscopeta
   - tiendaEscopetaCombate
   - bala
+  - zombie
   layers:
   - Default
   - TransparentFX

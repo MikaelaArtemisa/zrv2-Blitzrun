@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class Zombie : MonoBehaviour
 {
 
     public float vida = 15;
-
     public float speed = 0;
+
     public float RotationSpeed;
     public Transform target;
     private Quaternion _lookRotation;
@@ -24,7 +25,7 @@ public class Zombie : MonoBehaviour
     {
 
         movimientoZombie();
-
+   
 
 
     }
@@ -49,6 +50,8 @@ public class Zombie : MonoBehaviour
 
 
 
+
+
     private void OnCollisionEnter(Collision collision)
     {
 
@@ -63,19 +66,19 @@ public class Zombie : MonoBehaviour
 
             if (ArmasController.armaUsada == 1)
             {
-                vida = vida - 1;
+                vida = vida - 0.5f;
                 Debug.Log("disparo recibido.... vidas: " + vida);
             }
 
             if (ArmasController.armaUsada == 2)
             {
-                vida = vida - 3;
+                vida = vida - 1f;
                 Debug.Log("disparo recibido.... vidas: " + vida);
             }
 
             if (ArmasController.armaUsada == 3)
             {
-                vida = vida - 5;
+                vida = vida - 4f;
                 Debug.Log("disparo recibido.... vidas: " + vida);
             }
 
@@ -85,9 +88,9 @@ public class Zombie : MonoBehaviour
             {
                 //Destruir Zombie
                 Destroy(gameObject);
-
-
+              
                 playerController.dineroJugador += 5;
+                playerController.zombiesEliminados = playerController.zombiesEliminados + 1;
             }
 
 

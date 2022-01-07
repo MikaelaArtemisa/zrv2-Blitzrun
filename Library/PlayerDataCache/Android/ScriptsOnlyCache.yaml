@@ -4,6 +4,8 @@ ScriptsOnlyBuild:
     - ArmasController
     - GameController
     - PlayerController
+    - TiendaArmas
+    - Zombie
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.Graphs.dll:
@@ -89,7 +91,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5674}
     - Class: 114
-      Script: {instanceID: 6114}
+      Script: {instanceID: 5716}
+    - Class: 114
+      Script: {instanceID: 6116}
+    - Class: 114
+      Script: {instanceID: 7618}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -349,7 +355,7 @@ ScriptsOnlyBuild:
     className: UnityOnScrollMessageListener
   - hash:
       serializedVersion: 2
-      Hash: ca98a3fd1cf97eb2d7c8bd99c4ca581f
+      Hash: 176addaab70d7d21852c7ab0e838fdb6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -397,7 +403,7 @@ ScriptsOnlyBuild:
     className: UnityOnControllerColliderHitMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 0a3b10e91bd49f011cc879ecb8a18656
+      Hash: 8efbed77e9d853596414f1a964bd65ac
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ArmasController
@@ -667,6 +673,12 @@ ScriptsOnlyBuild:
     className: AnimatorMessageListener
   - hash:
       serializedVersion: 2
+      Hash: e7794cb89e34b0296adc81ae308d97ea
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Zombie
+  - hash:
+      serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -877,7 +889,7 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
-      Hash: aed9f5e72ef8924ffb524ec8c5793d1f
+      Hash: 9f02ccc1028ebb6695c571eaaf2287a5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TiendaArmas
